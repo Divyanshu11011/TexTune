@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Showcase</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 10%;
+      background-color: #333;
+    }
+
+    .button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #0074d9;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+      animation: pop-out 0.2s ease-in-out;
+    }
+
+    iframe {
+      width: 100%;
+      height: 90%;
+      border: none;
+    }
+
+    @keyframes pop-out {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <div class="button" onclick="loadWebsite('https://smodin.io/ai-content-detector')">1</div>
+    <div class="button" onclick="loadWebsite('https://www.scribbr.com/ai-detector/')">2</div>
+    <div class="button" onclick="loadWebsite('https://app.crossplag.com/individual/detector')">3</div>
+    <div class="button" onclick="loadWebsite('https://writer.com/ai-content-detector/')">4</div>
+  >
+  </div>
+  <iframe id="website-iframe" src="https://smodin.io/ai-content-detector"></iframe>
+
+  <script>
+    function loadWebsite(url) {
+      document.getElementById('website-iframe').src = url;
+      animateButton();
+    }
+
+    function animateButton() {
+      const buttons = document.querySelectorAll('.button');
+      buttons.forEach((button) => {
+        button.classList.add('animate-button');
+        setTimeout(() => {
+          button.classList.remove('animate-button');
+        }, 200);
+      });
+    }
+  </script>
+</body>
+</html>
