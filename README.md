@@ -52,6 +52,6 @@ TexTune allows you to fine-tune the AI-generated text to meet your specific requ
 
 ## Credits
 
-- TexTune utilizes the OpenAI API for AI text transformations. Make sure to check OpenAI's terms and conditions and give them credit when necessary.
+- Divyanshu And BHUPENDARJOGI FOR LOGO 
 
 Happy content creation with TexTune!
